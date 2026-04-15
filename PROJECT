@@ -8,4 +8,14 @@ layout:
 - go.kubebuilder.io/v4
 projectName: hello-operator
 repo: github.com/luwenbo/hello-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: demo.io
+  group: hello
+  kind: HelloApp
+  path: github.com/luwenbo/hello-operator/api/v1alpha1
+  version: v1alpha1
 version: "3"
